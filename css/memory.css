@@ -1,0 +1,35 @@
+
+body {text-align: center; font-family: verdana; padding-top:50px;}
+pre {text-align:left}
+
+.msg {margin-bottom: 20px;}
+
+.grid_holder {
+  width: 504px;
+  border: solid 1px black;
+  margin: 20px auto;
+  padding: 1px;
+  background-color: #fff;
+}
+
+.card {
+  color: #000;
+  display: inline-block;
+  border: solid 1px black;
+  font-size: 400%;
+  padding: 10px 0;
+  margin: 1px;
+  text-align: center;
+  height: 98px;
+  width: 98px;
+  cursor: default;
+  user-select:none;
+}
+.card.unmatched  {background-color: #333;}
+.card:hover  {background-color: #666;}
+.card.selected {background-color: #ccc;}
+
+.hidded {
+  opacity: 0.1;
+}
+
