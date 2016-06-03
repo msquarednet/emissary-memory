@@ -45,8 +45,8 @@ angular.module('memGame', [])
         self.createCards(); 
       },
       createCards: function() {
-        var data = shuffleArray([0,1,2,0,1,2]);
-        //var data = shuffleArray([0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9]);
+        // var data = shuffleArray([0,1,2,0,1,2]);
+        var data = shuffleArray([0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9]);
         self.cardsarray = data.map(function(num) { return new Card(num) });
       },
       cardClick: function(card) {

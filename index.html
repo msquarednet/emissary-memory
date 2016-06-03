@@ -28,14 +28,19 @@
       <h1>Memory</h1>
       <p class="msg" ng-bind="vm.gameSvc.msg"></p>
       <button ng-click="vm.gameSvc.init()" ng-show="vm.gameSvc.gameover">Play Again</button>
-      
+
       <div class="grid_holder"  cardsarray='vm.gameSvc.cardsarray'>
-        <div  ng-repeat="card in vm.gameSvc.cardsarray track by $index" class="card" 
-              ng-class="{selected:card.selected, unmatched:!card.matched}"
-              ng-click="vm.gameSvc.cardClick(card)">
-          <span ng-class="{hidded:!card.selected}" ng-bind="card.val"></span>
-        </div>          
+        
+        <div class="flip" ng-repeat="card in vm.gameSvc.cardsarray track by $index"> 
+            <div class="card" ng-class="{selected:card.selected}" ng-click="vm.gameSvc.cardClick(card)"> 
+                <div class="face front"><span class="hidded">{{card.val}}</span></div> 
+                <div class="face back">{{card.val}}</div> 
+            </div> 
+        </div>         
+
       </div>
+
+
 
       <p id="msg" ng-bind="'Score: ' + vm.gameSvc.score"></p>
 
